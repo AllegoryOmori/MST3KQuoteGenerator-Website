@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MST3K Quote Randomizer!</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="quote">
+            {% block content%}
+            {{ content | safe }}
+            {% endblock %}
+
+        </div>
+        <div class="picture"></div>
+        <a href="javascript:location.reload(true)">Refresh this page</a>
+    </div>
+</body>
+</html>
