@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Cambot.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MST3K Quote Randomizer!</title>
@@ -8,14 +9,21 @@
 <body>
     
     <div class="wrapper">
+        <div class="title"><h1>MST3K Joke Generator</h1></div>
+        <div class="picture">
+            <img src="/static/CrowTRobot.png" alt="Crow T Robot picture">
+        </div>
+        <div class="attribution">
+            <a href="https://commons.wikimedia.org/wiki/File:MST3kBots.jpg">Steve from San Francisco, CA, USA</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons <i>(modified)</i>
+        </div>
         <div class="quote">
             {% block content%}
             {{ content | safe }}
             {% endblock %}
-
         </div>
-        <div class="picture"></div>
+        <div class="refresh">
         <a href="javascript:location.reload(true)">Refresh this page</a>
+        </div>
     </div>
 </body>
 </html>
